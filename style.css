@@ -11,6 +11,41 @@ li {
     list-style-type: none;
 }
 
+section {
+    background-color: rgb(245, 245, 245);
+}
+
+.title {
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.title--secondary,
+.orange {
+    color: #f06449 !important;
+}
+
+/*
+
+LANDING PAGE 
+
+*/
+
+#landing-page {
+    min-height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+}
+
 /*
 
 NAVIGATION 
@@ -46,4 +81,8 @@ nav {
     font-size: 16px;
     color: #242424;
     font-weight: 700;
+}
+
+.fa-adjust {
+    font-size: 20px;
 }
