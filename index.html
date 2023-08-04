@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jason Tavera</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/f41a65f8a7.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("lW6WuZhYa80XP4E5h");
+      })();
+    </script>
   </head>
 
   <body>
@@ -145,14 +155,14 @@
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities.
           </h3>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input class="input" name="user_name" type="text" required />
+              <input class="input" name="user_name" type="text"  />
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input class="input" name="user_email" type="email" required />
+              <input class="input" name="user_email" type="email"  />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
@@ -160,14 +170,21 @@
                 class="input"
                 name="message"
                 type="text"
-                required
+                
               ></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
               Send it my way
             </button>
           </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
         </div>
+        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
